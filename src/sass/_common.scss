@@ -1,1 +1,29 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+// .example code {
+//   font-family: monospace;
+//   font-size: 16px;
+//   font-weight: 700;
+//   background-color: #ff6b0a;
+//   color: #fff;
+//   padding: 2px 6px;
+//   border-radius: 2px;
+// }
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.gallery {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.photo-card {
+  height: auto;
+  width: 200px;
+  //width: calc((100% - 90px) / 4);
+}
