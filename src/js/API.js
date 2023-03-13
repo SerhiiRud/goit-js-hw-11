@@ -26,4 +26,3 @@ export default function fetchPictures(query, page) {
 //       console.log('error');
 //     }
 //   });
-//.catch(error => console.log(error.name));

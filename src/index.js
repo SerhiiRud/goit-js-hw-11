@@ -1,3 +1,6 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 import fetchPictures from './js/API';
 const formEl = document.querySelector('#search-form');
 const galleryEl = document.querySelector('.gallery');
@@ -24,30 +27,35 @@ function galleryRender(hits) {
         views,
         comments,
         downloads,
-      }) => `<div class="photo-card">
-  <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+        previewURL,
+      }) => `<a href="${largeImageURL}" class="gallery-link"><div class="photo-card">
+  <img src="${webformatURL}" alt="${tags}" loading="lazy" class="image"/>
   <div class="info">
     <p class="info-item">
-      <b>${likes}/b>
+      <b>Likes: ${likes}</b>
     </p>
     <p class="info-item">
-      <b>${views}</b>
+      <b>Views: ${views}</b>
     </p>
     <p class="info-item">
-      <b>${comments}</b>
+      <b>Comments: ${comments}</b>
     </p>
     <p class="info-item">
-      <b>${downloads}</b>
+      <b>Downloads: ${downloads}</b>
     </p>
   </div>
-</div>`
+</div></a>`
     )
     .join('');
   galleryEl.insertAdjacentHTML('beforeend', markup);
 }
 
+const lightbox = new SimpleLightbox('.gallery a', {
+  overlayOpacity: 0.6,
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+  animationSpeed: 500,
+});
+
 formEl.addEventListener('submit', onSubmit);
-
-//console.log(fetchPictures('cat', 1));
-
-//------------------------------------------
