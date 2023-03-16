@@ -1,26 +1,23 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
-// .example code {
-//   font-family: monospace;
-//   font-size: 16px;
-//   font-weight: 700;
-//   background-color: #ff6b0a;
-//   color: #fff;
-//   padding: 2px 6px;
-//   border-radius: 2px;
-// }
-
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  text-align: center;
+}
+.search-form {
+  padding: 20 0;
+  text-align: center;
+  background-color: #8b9dc3;
+  margin-bottom: 20px;
 }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  //justify-content: center;
+  margin-bottom: 20px;
 }
 
 .gallery-link {
@@ -31,8 +28,14 @@
   width: 100%;
   height: 100%;
 }
+
 .image {
   display: block;
   width: 100%;
   object-fit: cover;
+}
+
+.load-more {
+  //display: none;
+  margin-bottom: 20px;
 }
