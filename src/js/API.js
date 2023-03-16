@@ -14,11 +14,3 @@ export default async function fetchPictures(query, page) {
     console.log(error.message);
   }
 }
-
-// export default function fetchPictures(query, page) {
-//   return axios
-//     .get(
-//       `${BASE_URL}?key=${USER_KEY}&q=${query}${PARAMETERS}&per_page=${HITS_PER_PAGE}&page=${page}`
-//     )
-//     .then(({ data }) => data);
-// }
